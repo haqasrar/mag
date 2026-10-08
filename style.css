@@ -1,0 +1,1325 @@
+/* ========================================================
+   TechBytes Magazine - Official Website Stylesheet
+   Editor-in-Chief: Shah Faisal
+   Theme: Clean, Modern, Professional Technical Magazine
+   ======================================================== */
+
+/* CSS Reset & Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f6;
+}
+
+img, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container to center content */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ========================================================
+   Top Announcement Bar & Header
+   ======================================================== */
+.top-bar {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    padding: 8px 0;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.issue-badge {
+    background-color: #ef4444;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* Main Site Header */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.logo-text h1 {
+    font-size: 1.7rem;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.logo-text span {
+    color: #2563eb;
+}
+
+.logo-text p {
+    font-size: 0.75rem;
+    color: #64748b;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Navigation Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #2563eb;
+    background-color: #eff6ff;
+}
+
+.btn-nav {
+    background-color: #2563eb;
+    color: #ffffff !important;
+    padding: 8px 16px !important;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+/* ========================================================
+   Hero Section / Magazine Cover Highlight
+   ======================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 50px 0;
+    margin-bottom: 40px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #f8fafc;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.hero-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 25px;
+    border-left: 3px solid #3b82f6;
+    padding-left: 12px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Reusable Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #64748b;
+}
+
+.btn-secondary:hover {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Magazine Cover Mockup Box */
+.magazine-cover-box {
+    background: linear-gradient(145deg, #1e3a8a, #0369a1);
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.magazine-cover-box::before {
+    content: "SPECIAL EDITION";
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: #e11d48;
+    color: white;
+    padding: 4px 35px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.cover-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.cover-header h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cover-header p {
+    font-size: 0.8rem;
+    color: #93c5fd;
+    text-transform: uppercase;
+}
+
+.cover-headline {
+    margin: 25px 0;
+}
+
+.cover-headline h4 {
+    font-size: 1.5rem;
+    color: #fef08a;
+    margin-bottom: 8px;
+}
+
+.cover-headline p {
+    font-size: 0.85rem;
+    color: #e2e8f0;
+}
+
+.cover-bullets {
+    text-align: left;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #f1f5f9;
+    margin-bottom: 20px;
+}
+
+.cover-bullets li {
+    margin-bottom: 6px;
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.cover-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #93c5fd;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+
+/* ========================================================
+   Main Section Layout (Articles + Sidebar)
+   ======================================================== */
+.content-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    color: #0f172a;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2563eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.section-title span {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #64748b;
+}
+
+/* Magazine Article Cards */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.article-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-banner {
+    height: 140px;
+    background: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.2rem;
+}
+
+.banner-web { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.banner-ai { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+.banner-cyber { background: linear-gradient(135deg, #10b981, #047857); }
+.banner-hardware { background: linear-gradient(135deg, #f59e0b, #b45309); }
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tag {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.tag-blue { background-color: #dbeafe; color: #1e40af; }
+.tag-purple { background-color: #ede9fe; color: #5b21b6; }
+.tag-green { background-color: #d1fae5; color: #065f46; }
+.tag-orange { background-color: #fef3c7; color: #92400e; }
+
+.card-body h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.card-meta {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 10px;
+}
+
+.card-body .read-more-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-body .read-more-link:hover {
+    text-decoration: underline;
+}
+
+/* ========================================================
+   Sidebar Styling
+   ======================================================== */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-widget {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e2e8f0;
+}
+
+.widget-title {
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Editor Note Card */
+.editor-box {
+    text-align: center;
+}
+
+.editor-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 auto 12px auto;
+    border: 3px solid #bfdbfe;
+}
+
+.editor-box h4 {
+    color: #1e293b;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.editor-box .editor-role {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.editor-box blockquote {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #475569;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 3px solid #2563eb;
+}
+
+/* Trending Topic List */
+.trending-list {
+    list-style: none;
+}
+
+.trending-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trending-list li:last-child {
+    border-bottom: none;
+}
+
+.trending-list a {
+    text-decoration: none;
+    color: #334155;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.trending-list a:hover {
+    color: #2563eb;
+}
+
+.badge-counter {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Mini Tech Quiz / Poll */
+.quiz-widget form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.88rem;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quiz-option:hover {
+    background-color: #f8fafc;
+}
+
+/* ========================================================
+   Magazine Issue Table / Feature Highlights
+   ======================================================== */
+.features-banner {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 50px;
+    border: 1px solid #e2e8f0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-top: 4px solid #2563eb;
+}
+
+.feature-item h4 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.feature-item p {
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+/* ========================================================
+   Article Detail Page Styles
+   ======================================================== */
+.article-header {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.article-header h1 {
+    font-size: 2.3rem;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.article-byline {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #64748b;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+.article-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.article-content h2 {
+    font-size: 1.6rem;
+    color: #0f172a;
+    margin: 30px 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.article-content h3 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin: 20px 0 10px 0;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+}
+
+.article-content ul, 
+.article-content ol {
+    margin: 0 0 20px 25px;
+}
+
+.article-content li {
+    margin-bottom: 8px;
+}
+
+.pull-quote {
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #1e40af;
+}
+
+.code-box {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 18px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.tip-box {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-left: 4px solid #10b981;
+    padding: 16px;
+    border-radius: 6px;
+    margin: 25px 0;
+}
+
+.tip-box strong {
+    color: #065f46;
+}
+
+/* ========================================================
+   Magazine Reader / Issues Page Styles
+   ======================================================== */
+.magazine-issue-viewer {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    border: 1px solid #e2e8f0;
+}
+
+.magazine-toc {
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 35px;
+}
+
+.toc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px dotted #cbd5e1;
+}
+
+.toc-title {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.toc-dots {
+    flex-grow: 1;
+    margin: 0 10px;
+    border-bottom: 1px dotted #94a3b8;
+}
+
+.toc-page {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* Two-column magazine spread */
+.magazine-columns {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule: 1px solid #e2e8f0;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.dropcap {
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    font-weight: bold;
+    color: #2563eb;
+    margin-right: 8px;
+    font-family: Georgia, serif;
+}
+
+/* ========================================================
+   About / Team Page
+   ======================================================== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.team-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.team-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: white;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.team-card h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+}
+
+.team-role {
+    font-size: 0.85rem;
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+/* Simple Contact Form */
+.contact-form-box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 35px;
+    border: 1px solid #e2e8f0;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #334155;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ========================================================
+   Newsletter & Footer
+   ======================================================== */
+.newsletter-section {
+    background: #1e293b;
+    color: white;
+    padding: 40px 0;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.newsletter-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.newsletter-box p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    padding: 12px 18px;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 65%;
+    outline: none;
+}
+
+.site-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 40px 0 20px 0;
+    border-top: 1px solid #334155;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #3b82f6;
+}
+
+.footer-col p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #3b82f6;
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* ========================================================
+   Responsive Media Queries (Universal Multi-Device Support)
+   Breakpoints:
+   - 1024px: Laptops & Landscape Tablets
+   - 860px:  Portrait Tablets (iPad) & Foldables
+   - 680px:  Large Smartphones & Phablets
+   - 480px:  Standard Smartphones (iPhone, Galaxy, Pixel)
+   - 360px:  Compact / Ultra-small Screens
+   ======================================================== */
+
+/* --- 1. Laptops & Landscape Tablets (<= 1024px) --- */
+@media (max-width: 1024px) {
+    .container {
+        width: 94%;
+        padding: 0 12px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 30px;
+    }
+
+    .content-layout {
+        gap: 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* --- 2. Portrait Tablets & Small Laptops (<= 860px) --- */
+@media (max-width: 860px) {
+    .top-bar-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 12px 0;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-meta {
+        justify-content: center;
+        border-left: none;
+        border-top: 2px solid #3b82f6;
+        border-bottom: 2px solid #3b82f6;
+        padding: 10px 0;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .magazine-cover-box {
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .magazine-columns {
+        column-count: 1;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+/* --- 3. Large Mobile & Phablets (<= 680px) --- */
+@media (max-width: 680px) {
+    .hero-section {
+        padding: 35px 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.85rem;
+    }
+
+    .hero-text p {
+        font-size: 0.98rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-header {
+        padding: 25px 20px;
+    }
+
+    .article-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .article-content {
+        padding: 25px 20px;
+        font-size: 0.98rem;
+    }
+
+    .magazine-issue-viewer {
+        padding: 25px 18px;
+    }
+
+    .contact-form-box {
+        padding: 25px 18px;
+    }
+
+    .newsletter-box h3 {
+        font-size: 1.35rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        font-size: 16px; /* Prevents auto-zoom on mobile Safari */
+    }
+
+    .newsletter-form .btn {
+        width: 100%;
+    }
+
+    /* Prevent mobile input zooming on iOS */
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px;
+    }
+}
+
+/* --- 4. Standard Smartphones (<= 480px) --- */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0 14px;
+    }
+
+    .top-bar {
+        font-size: 0.76rem;
+        padding: 6px 0;
+    }
+
+    .logo-container {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .logo-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo-text p {
+        font-size: 0.68rem;
+    }
+
+    .navbar ul {
+        gap: 6px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.82rem;
+        padding: 6px 10px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero-meta {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.8rem;
+    }
+
+    .magazine-cover-box {
+        padding: 20px 15px;
+    }
+
+    .cover-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .cover-headline h4 {
+        font-size: 1.25rem;
+    }
+
+    .cover-bullets {
+        font-size: 0.8rem;
+        padding: 12px;
+    }
+
+    .cover-bullets li {
+        margin-left: 14px;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .card-banner {
+        height: 120px;
+        font-size: 1.8rem;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .card-body h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Magazine TOC clean layout */
+    .toc-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 8px 0;
+    }
+
+    .toc-dots {
+        display: none;
+    }
+
+    .toc-page {
+        font-size: 0.85rem;
+    }
+
+    .dropcap {
+        font-size: 2.8rem;
+    }
+
+    .code-box {
+        padding: 12px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+
+    .pull-quote {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 10px;
+    }
+}
+
+/* --- 5. Compact / Ultra-Small Screens (<= 360px) --- */
+@media (max-width: 360px) {
+    .logo-text h1 {
+        font-size: 1.25rem;
+    }
+
+    .navbar ul li a {
+        font-size: 0.78rem;
+        padding: 5px 8px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        padding: 9px 16px;
+        font-size: 0.88rem;
+    }
+
+    .article-header,
+    .article-content,
+    .magazine-issue-viewer,
+    .contact-form-box {
+        padding: 16px 12px;
+    }
+}

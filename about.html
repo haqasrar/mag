@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us &amp; Editorial Team | TechBytes Magazine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div>
+                <span class="issue-badge">About Us</span>
+                <span>TechBytes Magazine • Editorial Board</span>
+            </div>
+            <div>
+                <span>Academic Publication &amp; Technology Journal</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Site Header & Nav -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <div class="logo-icon">&lt;/&gt;</div>
+                <div class="logo-text">
+                    <h1>Tech<span>Bytes</span></h1>
+                    <p>The Technical Magazine</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="magazine.html">Magazine Issue</a></li>
+                    <li><a href="article.html">Featured Article</a></li>
+                    <li><a href="about.html" class="active">About Team</a></li>
+                    <li><a href="#contact" class="btn-nav">Submit Article</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 3. Hero / Intro Section -->
+    <div class="hero-section" style="padding: 40px 0;">
+        <div class="container" style="text-align: center;">
+            <span class="hero-tag">The People Behind The Pages</span>
+            <h2 style="font-size: 2.2rem; margin-top: 10px;">About TechBytes Magazine</h2>
+            <p style="max-width: 700px; margin: 10px auto; color: #cbd5e1;">
+                Founded to bridge theory and practical engineering, TechBytes transforms technical curiosity into actionable knowledge and deep architectural insights.
+            </p>
+        </div>
+    </div>
+
+    <!-- 4. Main Body: Mission & Team -->
+    <main class="container" style="margin-bottom: 50px;">
+
+        <!-- Mission Card -->
+        <section class="features-banner" style="margin-top: 30px;">
+            <h2 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 12px; border-bottom: 2px solid #2563eb; padding-bottom: 6px;">
+                Our Mission &amp; Engineering Objective
+            </h2>
+            <p style="color: #475569; font-size: 1rem; line-height: 1.8; margin-bottom: 15px;">
+                Our objective with <strong>TechBytes Magazine</strong> is three-fold:
+            </p>
+            <div class="features-grid" style="margin-top: 15px;">
+                <div class="feature-item">
+                    <h4>1. Promote Architectural Literacy</h4>
+                    <p>To demystify fundamental computer science paradigms using rigorous analysis, clean diagrams, and practical models.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>2. Highlight Clean Design Principles</h4>
+                    <p>To advocate modularity, maintainable software design patterns, and sustainable engineering workflows.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>3. Foster Technical Collaboration</h4>
+                    <p>To create an open peer-reviewed publication where passionate technologists can showcase their breakthroughs and research.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editorial Team / Editor-in-Chief -->
+        <section style="margin: 40px 0;">
+            <div class="section-title">
+                <h2>Meet the Editor-in-Chief</h2>
+                <span>Founder &amp; Publication Lead</span>
+            </div>
+
+            <div style="max-width: 550px; margin: 30px auto;">
+                <div class="team-card" style="padding: 35px 25px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);">
+                    <div class="team-avatar" style="width: 110px; height: 110px; font-size: 2.6rem;">SF</div>
+                    <h3 style="font-size: 1.5rem; margin-top: 10px;">Shah Faisal</h3>
+                    <p class="team-role" style="font-size: 1rem; margin-bottom: 15px;">Editor-in-Chief &amp; Founder</p>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: #475569;">
+                        Oversees editorial vision, technical curation, and publication standards for TechBytes Magazine. Dedicated to exploring modern computing architectures, developer tools, and cutting-edge software engineering paradigms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Submission / Contact Form -->
+        <section id="contact" style="margin-top: 50px;">
+            <div class="section-title">
+                <h2>Submit an Article for the Next Issue</h2>
+                <span>Open for Submissions</span>
+            </div>
+
+            <div class="contact-form-box">
+                <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 25px; text-align: center;">
+                    Have you architected an innovative system, solved a complex engineering challenge, or explored an emerging paradigm? 
+                    Submit your pitch to be featured in TechBytes Issue #2!
+                </p>
+
+                <form onsubmit="alert('Thank you! Your article submission has been received by Shah Faisal and the editorial board.'); this.reset(); return false;">
+                    
+                    <div class="form-group">
+                        <label for="studentName">Full Name</label>
+                        <input type="text" id="studentName" placeholder="e.g. Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentEmail">Email Address</label>
+                        <input type="email" id="studentEmail" placeholder="e.g. author@domain.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="articleCategory">Article Category</label>
+                        <select id="articleCategory" required>
+                            <option value="">-- Select a Category --</option>
+                            <option value="systems">Systems &amp; Architecture</option>
+                            <option value="ai">Artificial Intelligence &amp; Data</option>
+                            <option value="cyber">Cybersecurity &amp; Cryptography</option>
+                            <option value="hardware">Hardware &amp; Computer Architecture</option>
+                            <option value="showcase">Engineering Project Showcase</option>
+                            <option value="humor">Tech Trivia &amp; Humor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="articleTitle">Proposed Article Title</label>
+                        <input type="text" id="articleTitle" placeholder="e.g. Scaling Distributed Cache Layers" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="articleAbstract">Brief Summary / Abstract (100 - 200 words)</label>
+                        <textarea id="articleAbstract" rows="5" placeholder="Summarize your topic, core technical takeaways, and system implications..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 12px;">Submit Article Pitch &rarr;</button>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About TechBytes</h4>
+                    <p>TechBytes is the technical magazine established to explore cutting-edge technologies, systems engineering, and computer science.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="magazine.html">Magazine Issue</a></li>
+                        <li><a href="article.html">Featured Article</a></li>
+                        <li><a href="about.html">About Team</a></li>
+                        <li><a href="#contact">Submit Article</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Department</h4>
+                    <p>Department of Computer Science</p>
+                    <p>Academic Year 2026-2027</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Editor: Shah Faisal</p>
+                    <p>Email: techbytes.mag@domain.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechBytes Magazine. Published by Shah Faisal &amp; Editorial Team.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
